@@ -1,19 +1,26 @@
-const express = require('express')
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
 
-const { createExpenseHead, getExpenseHeads, getExpenseHeadByName, getExpenseHeadById, updateExpenseHead, deleteExpenseHead } = require('../controllers/ExpenseHead')
+const {
+  createExpenseHead,
+  getExpenseHeads,
+  getExpenseHeadByName,
+  getExpenseHeadById,
+  updateExpenseHead,
+  deleteExpenseHead,
+} = require("../controllers/ExpenseHead");
 
 // CREATE Expense Head
-router.post('/expenseHead', createExpenseHead)
+router.post("/expenseHead", createExpenseHead);
 // GET all expense heads
-router.get('/expenseHead', getExpenseHeads)
+router.get("/expenseHead", getExpenseHeads);
 // GET a specific expense head by name
-router.get('/expenseHead/:expenseHeadName', getExpenseHeadByName)
+router.get("/expenseHead/:expenseHeadName", getExpenseHeadByName);
 // GET a specific expense head by id
-router.get('/expenseHead/:expenseHeadId', getExpenseHeadById)
+router.get("/expenseHead/:expenseHeadId", getExpenseHeadById);
 // UPDATE specific expense head
-router.patch('/expenseHead/:expenseHeadId', updateExpenseHead)
+router.patch("/expenseHead/:expenseHeadId", updateExpenseHead);
 // DELETE specific expense head
-router.delete('/expenseHead/:expenseHeadId', deleteExpenseHead)
+router.delete("/expenseHead/:expenseHeadId", deleteExpenseHead);
 
-module.exports = router
+module.exports = router;
